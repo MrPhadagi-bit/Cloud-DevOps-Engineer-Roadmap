@@ -5,23 +5,7 @@
 
 ---
 
-## 📋 Table of Contents
-
-- [What Is the Terminal?](#what-is-the-terminal)
-- [Terminal vs. Shell](#terminal-vs-shell)
-- [Common Shells](#common-shells)
-  - [Bash](#bash)
-  - [Zsh](#zsh)
-  - [Fish](#fish)
-- [How to Access a Terminal](#how-to-access-a-terminal)
-- [The Prompt Explained](#the-prompt-explained)
-- [Your First Commands](#your-first-commands)
-- [Step-by-Step: Log Into the FREE HTB Academy Linux Lab](#step-by-step-log-into-the-free-htb-academy-linux-lab)
-- [Quick Reference](#quick-reference)
-
----
-
-## 🖥️ What Is the Terminal?
+##  What Is the Terminal?
 
 The **terminal** is your text-based command-line interface (CLI) to the Linux operating system. It is the single most powerful tool in a hacker's arsenal.
 
