@@ -9,7 +9,7 @@
 
 The **terminal** is your text-based command-line interface (CLI) to the Linux operating system. It is the single most powerful tool in a Cloud & DevOps.
 
-Unlike a graphical user interface (GUI) where you click buttons and windows, the terminal lets you talk directly to the computer using typed commands. Every action you can perform in a GUI — and thousands more you cannot — can be done faster and more precisely in the terminal.
+Unlike a graphical user interface (GUI) where you click buttons and windows, the terminal lets you talk directly to the computer using typed commands. Every action you can perform in a GUI  and thousands more you cannot  can be done faster and more precisely in the terminal.
 
 >  **Why Devs love the terminal:**
 > - **Speed:** Typing a command is faster than navigating menus.
