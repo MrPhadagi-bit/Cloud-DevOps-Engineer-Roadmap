@@ -1,4 +1,4 @@
-#  Linux for Hackers — EP 1: The Terminal
+#  Linux for Cloud & DevOps — EP 1: The Terminal
 
 > **A focused reference guide on the Linux Terminal**  
 > *Everything you need to understand the shell and get hands-on in a real Linux lab.*
