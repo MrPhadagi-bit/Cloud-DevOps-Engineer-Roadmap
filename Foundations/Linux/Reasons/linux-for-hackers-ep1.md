@@ -140,3 +140,12 @@ With your terminal open (either in Pwnbox or via SSH), work through each section
 | Switch to Fish | `fish` |
 
 ---
+
+##  Summary
+
+- The **terminal** is the window; the **shell** is the interpreter.
+- **Bash** is the standard — learn it first.
+- **Zsh** adds power-user features and customization.
+- **Fish** is the most beginner-friendly with built-in autosuggestions.
+- The **prompt** tells you who you are, what machine you are on, and where you are in the filesystem.
+- The **HTB Academy Linux Fundamentals** module is a free, hands-on lab. Use the Pwnbox or SSH into lab machines to practice real commands.
