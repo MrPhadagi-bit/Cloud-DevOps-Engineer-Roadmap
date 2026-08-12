@@ -74,7 +74,7 @@ echo $SHELL
 ```
 ---
 
-## ⌨️ Basic Commands
+##  Basic Commands
 
 ### Navigation
 
