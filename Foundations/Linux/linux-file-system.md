@@ -33,6 +33,15 @@ Linux supports many file system types, including:
 
 ---
 
+## 3. File System Hierarchy Standard (FHS)
+
+The **File System Hierarchy Standard (FHS)** defines the directory structure and directory contents in Linux distributions. It was created to provide consistency across different Linux distributions, making it easier for users, software developers, and system administrators to understand where files should be located.
+
+> **Why FHS matters:** It ensures that no matter which Linux distribution you use (Ubuntu, Fedora, Debian, Arch, etc.), the core directory structure remains predictable and familiar.
+
+
+---
+
 ## The Root Directory: `/`
 
 ```
