@@ -15,24 +15,21 @@ Unlike Windows, which uses drive letters (e.g., `C:\`, `D:\`), Linux uses a **si
 
 ---
 
-## What is a File System?
+## 2. What is a File System?
 
-A file system is a method of storing and organizing data on a storage device. It defines:
+A **file system** is a method and data structure that an operating system uses to control how data is stored and retrieved. Without a file system, data placed in a storage medium would be one large body of data with no way to tell where one piece of information stops and the next begins.
 
-- How files are named
-- Where they are stored
-- How they are retrieved
-- What metadata is associated with them
-
-Linux supports multiple file system types:
+Linux supports many file system types, including:
 
 | File System | Description |
 |-------------|-------------|
-| **ext4** | Fourth Extended Filesystem — default on most distributions |
-| **XFS** | High-performance journaling filesystem |
-| **Btrfs** | Modern copy-on-write filesystem with advanced features |
-| **NTFS** | Windows filesystem (supported for compatibility) |
-| **FAT32** | Legacy filesystem (USB drives, SD cards) |
+| **ext4** | Fourth Extended Filesystem — the default for most Linux distributions |
+| **ext3** | Third Extended Filesystem — journaling file system |
+| **XFS** | High-performance journaling file system, great for large files |
+| **Btrfs** | B-tree file system — advanced features like snapshots and compression |
+| **NTFS** | Windows file system (supported in Linux via drivers) |
+| **FAT32 / exFAT** | Commonly used for USB drives and SD cards |
+| **tmpfs** | Temporary file system stored in RAM |
 
 ---
 
