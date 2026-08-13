@@ -4,37 +4,6 @@
 
 ---
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [What is a File System?](#what-is-a-file-system)
-- [The Root Directory: `/`](#the-root-directory-)
-- [Directory Reference](#directory-reference)
-  - [`/bin` – Essential User Binaries](#bin--essential-user-binaries)
-  - [`/sbin` – System Administration Binaries](#sbin--system-administration-binaries)
-  - [`/boot` – Boot Loader Files](#boot--boot-loader-files)
-  - [`/dev` – Device Files](#dev--device-files)
-  - [`/etc` – Configuration Files](#etc--configuration-files)
-  - [`/home` – User Home Directories](#home--user-home-directories)
-  - [`/lib` & `/lib64` – Essential Shared Libraries](#lib--lib64--essential-shared-libraries)
-  - [`/mnt` & `/media` – Mount Points](#mnt--media--mount-points)
-  - [`/opt` – Optional Software](#opt--optional-software)
-  - [`/proc` – Process Information](#proc--process-information)
-  - [`/root` – Root User Home](#root--root-user-home)
-  - [`/run` – Runtime Variable Data](#run--runtime-variable-data)
-  - [`/srv` – Service Data](#srv--service-data)
-  - [`/sys` – System Information](#sys--system-information)
-  - [`/tmp` – Temporary Files](#tmp--temporary-files)
-  - [`/usr` – User Programs](#usr--user-programs)
-  - [`/var` – Variable Data](#var--variable-data)
-- [Virtual File Systems](#virtual-file-systems)
-- [Linux vs Windows File System](#linux-vs-windows-file-system)
-- [Navigation Cheat Sheet](#navigation-cheat-sheet)
-- [Quick Reference Diagram](#quick-reference-diagram)
-- [Sources & References](#sources--references)
-
----
-
 ## Introduction
 
 > **"Everything in Linux is a file."**
