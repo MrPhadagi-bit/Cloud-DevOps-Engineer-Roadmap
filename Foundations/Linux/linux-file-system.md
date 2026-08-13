@@ -8,9 +8,10 @@
 
 > **"Everything in Linux is a file."**
 
-This is one of the most fundamental concepts in Linux. Your mouse, screen, printer, CPU, RAM, commands, documents, and pictures are all represented as files. Not every file is the same — some, like device files, are special — but they all appear in the file system hierarchy.
 
-The Linux file system organizes everything in a **hierarchical tree structure** starting from a single root directory (`/`). Unlike Windows, which uses drive letters (C:\, D:\), Linux mounts everything into one unified tree.
+Linux is an **open-source, Unix-like operating system** that powers everything from smartphones and laptops to servers, supercomputers, and embedded systems. One of the most fundamental concepts to master when learning Linux is its **file system** — the way files and directories are organized, stored, and accessed.
+
+Unlike Windows, which uses drive letters (e.g., `C:\`, `D:\`), Linux uses a **single, unified directory tree** starting from the **root directory (`/`)**. Everything in Linux — files, directories, devices, processes, and even network sockets — is treated as a file.
 
 ---
 
