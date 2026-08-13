@@ -4,44 +4,6 @@
 
 ---
 
-## Table of Contents
-
-- [1. Introduction](#1-introduction)
-- [2. What is a File System?](#2-what-is-a-file-system)
-- [3. File System Hierarchy Standard (FHS)](#3-file-system-hierarchy-standard-fhs)
-- [4. The Linux Directory Structure](#4-the-linux-directory-structure)
-  - [4.1 Root Directory (`/`)](#41-root-directory-)
-  - [4.2 `/bin` — Essential User Binaries](#42-bin--essential-user-binaries)
-  - [4.3 `/sbin` — System Binaries](#43-sbin--system-binaries)
-  - [4.4 `/etc` — Configuration Files](#44-etc--configuration-files)
-  - [4.5 `/dev` — Device Files](#45-dev--device-files)
-  - [4.6 `/proc` — Process Information](#46-proc--process-information)
-  - [4.7 `/var` — Variable Data Files](#47-var--variable-data-files)
-  - [4.8 `/tmp` — Temporary Files](#48-tmp--temporary-files)
-  - [4.9 `/usr` — User Programs](#49-usr--user-programs)
-  - [4.10 `/home` — Home Directories](#410-home--home-directories)
-  - [4.11 `/boot` — Boot Loader Files](#411-boot--boot-loader-files)
-  - [4.12 `/lib` — Essential Shared Libraries](#412-lib--essential-shared-libraries)
-  - [4.13 `/opt` — Optional Add-on Software](#413-opt--optional-add-on-software)
-  - [4.14 `/mnt` & `/media` — Mount Points](#414-mnt--media--mount-points)
-  - [4.15 `/srv` — Service Data](#415-srv--service-data)
-  - [4.16 `/lost+found` — Recovered Files](#416-lostfound--recovered-files)
-- [5. File Types in Linux](#5-file-types-in-linux)
-- [6. Navigating the File System](#6-navigating-the-file-system)
-  - [6.1 Absolute vs. Relative Paths](#61-absolute-vs-relative-paths)
-  - [6.2 Essential Navigation Commands](#62-essential-navigation-commands)
-- [7. File & Directory Operations](#7-file--directory-operations)
-- [8. Understanding File Permissions](#8-understanding-file-permissions)
-  - [8.1 Permission Categories](#81-permission-categories)
-  - [8.2 Changing Permissions](#82-changing-permissions)
-  - [8.3 Ownership](#83-ownership)
-- [9. Hidden Files & Directories](#9-hidden-files--directories)
-- [10. Pipes & Redirection](#10-pipes--redirection)
-- [11. Practical Examples](#11-practical-examples)
-- [12. Cheat Sheet](#12-cheat-sheet)
-- [13. References](#13-references)
-
----
 
 ## 1. Introduction
 
