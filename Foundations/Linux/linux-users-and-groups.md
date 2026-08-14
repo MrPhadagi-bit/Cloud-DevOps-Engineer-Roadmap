@@ -1,47 +1,5 @@
 # Linux Users & Groups
 
-> A comprehensive guide to understanding and managing Linux users, groups, and permissions.
-> Based on [Linux for Programmers #3 | Linux Users and Groups](https://youtu.be/b-9j2jiCOEA) by TechWithTim & Linode.
-
----
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Understanding Linux Users](#understanding-linux-users)
-  - [Types of Users](#types-of-users)
-  - [The `/etc/passwd` File](#the-etcpasswd-file)
-  - [The `/etc/shadow` File](#the-etcshadow-file)
-  - [Creating Users](#creating-users)
-  - [Setting & Changing Passwords](#setting--changing-passwords)
-  - [Switching Between Users](#switching-between-users)
-  - [Deleting Users](#deleting-users)
-- [Understanding Linux Groups](#understanding-linux-groups)
-  - [Primary vs. Secondary Groups](#primary-vs-secondary-groups)
-  - [The `/etc/group` File](#the-etcgroup-file)
-  - [Creating Groups](#creating-groups)
-  - [Assigning Users to Groups](#assigning-users-to-groups)
-  - [Removing Users from Groups](#removing-users-from-groups)
-  - [Deleting Groups](#deleting-groups)
-- [File & Directory Permissions](#file--directory-permissions)
-  - [Permission Types: Read, Write, Execute](#permission-types-read-write-execute)
-  - [Viewing Permissions with `ls -l`](#viewing-permissions-with-ls--l)
-  - [Changing Permissions with `chmod`](#changing-permissions-with-chmod)
-    - [Symbolic Notation](#symbolic-notation)
-    - [Octal (Numeric) Notation](#octal-numeric-notation)
-  - [Changing Ownership with `chown`](#changing-ownership-with-chown)
-  - [Changing Group with `chgrp`](#changing-group-with-chgrp)
-  - [Special Permissions: SUID, SGID, Sticky Bit](#special-permissions-suid-sgid-sticky-bit)
-- [Sudo & Privilege Escalation](#sudo--privilege-escalation)
-  - [Understanding `sudo`](#understanding-sudo)
-  - [The Sudoers File](#the-sudoers-file)
-  - [Whitelisting Commands](#whitelisting-commands)
-- [Practical Examples](#practical-examples)
-- [Best Practices](#best-practices)
-- [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
-
----
-
 ## Introduction
 
 Linux is a **multi-user operating system** designed from the ground up to allow multiple users to access the system simultaneously. Unlike single-user systems, Linux needs a robust mechanism to:
