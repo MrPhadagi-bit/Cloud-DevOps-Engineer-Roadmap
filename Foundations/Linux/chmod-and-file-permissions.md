@@ -121,7 +121,7 @@ chmod [OPTIONS] MODE FILE...
 
 ## Symbolic vs Numeric Notation
 
-### 🔤 Symbolic (Text) Method
+###  Symbolic (Text) Method
 
 Uses letters and operators to modify permissions.
 
@@ -162,7 +162,7 @@ chmod o= private.key
 chmod u+rwx,go=rx,g-w myfile
 ```
 
-### 🔢 Numeric (Octal) Method
+###  Numeric (Octal) Method
 
 Uses a 3-digit number where each digit represents permissions for owner, group, and others.
 
