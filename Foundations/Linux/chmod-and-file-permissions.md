@@ -204,7 +204,7 @@ chmod 700 private.key
 chmod 600 ~/.ssh/id_rsa
 ```
 
-### 📊 Common Numeric Values Cheat Sheet
+###  Common Numeric Values Cheat Sheet
 
 | Value | Permissions | Use Case |
 |-------|-------------|----------|
@@ -274,7 +274,7 @@ chmod 644 /var/www/my_site/index.html
 # Apply permissions to a directory and everything inside
 chmod -R 755 my_project/
 
-# ⚠️ Be careful! Test first:
+#  Be careful! Test first:
 chmod -R 755 my_project/  # This affects ALL files and subdirs
 ```
 
@@ -382,7 +382,7 @@ stat file             # Full file statistics
 
 ## Hands-On Lab Exercises
 
-### 🧪 Exercise 1: Basic Permission Reading
+###  Exercise 1: Basic Permission Reading
 
 ```bash
 # 1. Create a test directory
