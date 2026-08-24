@@ -1,22 +1,6 @@
-# 🔐 chmod and File Permissions
+#  chmod and File Permissions
 
-> **GitHub Lab** | Based on [Linux for Programmers #4 | chmod and File Permissions](https://youtu.be/RQLNDekr2wg) by Tech With Tim
-
----
-
-## 📋 Table of Contents
-
-1. [Introduction](#introduction)
-2. [What is `chmod`?](#what-is-chmod)
-3. [Understanding `ls -l` Output](#understanding-ls--l-output)
-4. [The `chmod` Command](#the-chmod-command)
-5. [Symbolic vs Numeric Notation](#symbolic-vs-numeric-notation)
-6. [Practical Examples](#practical-examples)
-7. [Special Cases](#special-cases)
-8. [Quick Reference](#quick-reference)
-9. [Hands-On Lab Exercises](#hands-on-lab-exercises)
-
----
+> **GitHub Lab** | Based on [Linux for Programmers #4 | chmod and File Permissions]
 
 ## Introduction
 
