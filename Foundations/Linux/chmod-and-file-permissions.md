@@ -208,7 +208,7 @@ chmod 600 ~/.ssh/id_rsa
 
 | Value | Permissions | Use Case |
 |-------|-------------|----------|
-| `777` | `rwxrwxrwx` | Full access for everyone ⚠️ (avoid) |
+| `777` | `rwxrwxrwx` | Full access for everyone  (avoid) |
 | `755` | `rwxr-xr-x` | Executable scripts, directories |
 | `750` | `rwxr-x---` | Private executable, group can run |
 | `700` | `rwx------` | Private scripts, SSH keys directory |
@@ -401,7 +401,7 @@ ls -l
 #    - Who is the group?
 ```
 
-### 🧪 Exercise 2: Symbolic Mode Practice
+###  Exercise 2: Symbolic Mode Practice
 
 ```bash
 cd ~/chmod_lab
@@ -423,7 +423,7 @@ chmod g+w *
 ls -l
 ```
 
-### 🧪 Exercise 3: Numeric Mode Practice
+###  Exercise 3: Numeric Mode Practice
 
 ```bash
 cd ~/chmod_lab
@@ -445,7 +445,7 @@ chmod 600 *
 ls -l
 ```
 
-### 🧪 Exercise 4: Directory Permissions
+###  Exercise 4: Directory Permissions
 
 ```bash
 cd ~/chmod_lab
@@ -467,7 +467,7 @@ chmod 755 secrets
 ls -ld secrets
 ```
 
-### 🧪 Exercise 5: Recursive Permissions
+###  Exercise 5: Recursive Permissions
 
 ```bash
 cd ~/chmod_lab
@@ -484,7 +484,7 @@ find project -type f -exec chmod 644 {} \;
 find project -exec ls -ld {} \;
 ```
 
-### 🧪 Exercise 6: Real-World Scenario
+###  Exercise 6: Real-World Scenario
 
 ```bash
 # Scenario: You've created a web application
@@ -513,7 +513,7 @@ ls -ld uploads
 
 ---
 
-## ✅ Summary Checklist
+##  Summary Checklist
 
 - [ ] I understand the three permission types: `r`, `w`, `x`
 - [ ] I understand the three user classes: `u`, `g`, `o`
@@ -527,13 +527,11 @@ ls -ld uploads
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Linux File Permissions Explained - Red Hat](https://www.redhat.com/en/blog/linux-file-permissions-explained)
 - [chmod Command in Linux - Linuxize](https://linuxize.com/post/chmod-command-in-linux/)
 - [Modify File Permissions with chmod - Linode Docs](https://www.akamai.com/docs/guides/modify-file-permissions-with-chmod/)
 - [Original Video: Linux for Programmers #4](https://youtu.be/RQLNDekr2wg)
 
----
 
-*Happy learning! 🐧*
