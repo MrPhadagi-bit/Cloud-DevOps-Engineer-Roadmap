@@ -1,19 +1,6 @@
-# 🖥️ GitHub Lab: Linux Process Monitoring with `top` & `htop`
+#  GitHub Lab: Linux Process Monitoring with `top` & `htop`
 
 > **Lab Objective:** Learn to monitor, inspect, and manage running processes on a Linux system using the built-in `top` command and the enhanced `htop` viewer. By the end of this lab, you will be able to read system resource usage, identify resource-heavy processes, sort and filter process lists, and safely terminate or reprioritize tasks.
-
----
-
-## 📋 Table of Contents
-
-1. [Prerequisites](#1-prerequisites)
-2. [What is a Process?](#2-what-is-a-process)
-3. [Lab Part 1: The `top` Command](#3-lab-part-1-the-top-command)
-4. [Lab Part 2: The `htop` Command](#4-lab-part-2-the-htop-command)
-5. [Lab Part 3: `top` vs `htop` — Side by Side](#5-lab-part-3-top-vs-htop--side-by-side)
-6. [Lab Part 4: Real-World Troubleshooting Scenarios](#6-lab-part-4-real-world-troubleshooting-scenarios)
-7. [Quick Reference Cheat Sheet](#7-quick-reference-cheat-sheet)
-8. [Further Reading](#8-further-reading)
 
 ---
 
