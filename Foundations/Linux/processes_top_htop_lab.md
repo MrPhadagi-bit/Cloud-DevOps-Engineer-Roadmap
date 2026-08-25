@@ -55,7 +55,7 @@ A **process** is an instance of a running program. Every time you launch an appl
 | `T` | **Stopped** — paused by a signal (e.g., Ctrl+Z) |
 | `Z` | **Zombie** — terminated but not yet reaped by parent |
 
-> 💡 **Think of it this way:** The kernel is the manager, processes are the workers, and `top`/`htop` are the dashboards showing you who is doing what and how hard they are working.
+>  **Think of it this way:** The kernel is the manager, processes are the workers, and `top`/`htop` are the dashboards showing you who is doing what and how hard they are working.
 
 ---
 
@@ -74,7 +74,7 @@ You will see a screen divided into two sections:
 - **Summary Area (top half):** System-wide stats (uptime, load, CPU, memory)
 - **Task Area (bottom half):** The list of running processes
 
-> 📝 **Note:** `top` runs interactively. It will keep updating until you quit.
+>  **Note:** `top` runs interactively. It will keep updating until you quit.
 
 ---
 
@@ -112,7 +112,7 @@ MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   3890.2 avail Mem
 | | `st` | Time stolen by virtual machines |
 | **Line 4-5** | `MiB Mem` / `MiB Swap` | Memory and swap usage |
 
-> 🔍 **Load Average Tip:** A load average of `1.00` on a single-core system means the CPU is fully utilized. On a 4-core system, `4.00` would mean full utilization. Values below your core count are generally healthy.
+>  **Load Average Tip:** A load average of `1.00` on a single-core system means the CPU is fully utilized. On a 4-core system, `4.00` would mean full utilization. Values below your core count are generally healthy.
 
 ---
 
@@ -168,7 +168,7 @@ While `top` is running, press these keys (no Enter needed):
 | `d` or `s` | **Set Delay** | Change refresh interval (in seconds) |
 | `W` | **Write Config** | Save current settings to `~/.toprc` |
 
-#### 🧪 Hands-On Exercise: Navigate `top`
+####  Hands-On Exercise: Navigate `top`
 
 1. Launch `top`
 2. Press `1` to see individual CPU cores
@@ -195,7 +195,7 @@ PID to signal/kill [default pid = 1234]
 # 9  = SIGKILL (force, use only if SIGTERM fails)
 ```
 
-> ⚠️ **Warning:** Always try `15 (SIGTERM)` first. `9 (SIGKILL)` terminates immediately without cleanup and may cause data loss or file corruption.
+>  **Warning:** Always try `15 (SIGTERM)` first. `9 (SIGKILL)` terminates immediately without cleanup and may cause data loss or file corruption.
 
 ---
 
@@ -360,7 +360,7 @@ sudo htop
 | `PgUp`/`PgDn` | **Scroll** | Scroll through process list |
 | `Arrow Keys` | **Navigate** | Move selection up/down/left/right |
 
-> 🖱️ **Mouse Support:** You can also click column headers to sort, click processes to select them, and click the bottom menu items to trigger actions.
+>  **Mouse Support:** You can also click column headers to sort, click processes to select them, and click the bottom menu items to trigger actions.
 
 ---
 
@@ -422,7 +422,7 @@ htop
 # 6. If the process doesn't die, repeat with signal 9 (SIGKILL)
 ```
 
-> ⚠️ **Best Practice:** Always send `SIGTERM (15)` first. Give the process a few seconds to shut down gracefully. Only escalate to `SIGKILL (9)` if it becomes unresponsive.
+>  **Best Practice:** Always send `SIGTERM (15)` first. Give the process a few seconds to shut down gracefully. Only escalate to `SIGKILL (9)` if it becomes unresponsive.
 
 ---
 
@@ -462,7 +462,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
 #   │  └─ 212 www-data 0.2 0.5 │ └─ nginx: worker process
 ```
 
-> 💡 **Tip:** Killing a parent process in tree view will also terminate all its children.
+>  **Tip:** Killing a parent process in tree view will also terminate all its children.
 
 ---
 
@@ -504,13 +504,13 @@ Tree view shows the parent-child relationship between processes, making it easy 
 | **Batch mode** | ✅ Yes (`-b`) | ❌ Interactive only |
 | **Best for** | Minimal systems, scripting | Daily interactive monitoring |
 
-> 💡 **Rule of Thumb:** Use `top` when `htop` isn't available (e.g., rescue mode, minimal containers). Install `htop` everywhere else for a superior interactive experience.
+>  **Rule of Thumb:** Use `top` when `htop` isn't available (e.g., rescue mode, minimal containers). Install `htop` everywhere else for a superior interactive experience.
 
 ---
 
 ## 6. Lab Part 4: Real-World Troubleshooting Scenarios
 
-### Scenario 1: 🔥 System is Slow — Find the CPU Hog
+### Scenario 1:  System is Slow — Find the CPU Hog
 
 ```bash
 # Method 1: Using top
@@ -527,7 +527,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
  ps aux --sort=-%cpu | head -10
 ```
 
-### Scenario 2: 🧠 Running Out of Memory — Find the Memory Hog
+### Scenario 2:  Running Out of Memory — Find the Memory Hog
 
 ```bash
 # Method 1: Using top
@@ -542,7 +542,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
  ps aux --sort=-%mem | head -10
 ```
 
-### Scenario 3: 🌳 Find Which Parent Spawned Too Many Children
+### Scenario 3:  Find Which Parent Spawned Too Many Children
 
 ```bash
 # Using htop tree view
@@ -554,7 +554,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
  ps auxf | head -30
 ```
 
-### Scenario 4: 🔍 Investigate a Specific Process
+### Scenario 4:  Investigate a Specific Process
 
 ```bash
 # Find the PID first
@@ -571,7 +571,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
 # Select process → press 'l' for lsof
 ```
 
-### Scenario 5: 🛑 Kill a Runaway Process
+### Scenario 5:  Kill a Runaway Process
 
 ```bash
 # Step 1: Identify the process
@@ -586,7 +586,7 @@ Tree view shows the parent-child relationship between processes, making it easy 
 # Step 5: If still running, repeat with signal 9 (SIGKILL)
 ```
 
-### Scenario 6: ⚖️ Deprioritize a Background Task
+### Scenario 6:  Deprioritize a Background Task
 
 ```bash
 # You have a backup script consuming too much CPU
@@ -667,7 +667,7 @@ Pause:      Z
 
 ---
 
-## ✅ Lab Completion Checklist
+##  Lab Completion Checklist
 
 - [ ] Launched `top` and read all header fields
 - [ ] Toggled CPU view (`1`), color (`z`), and tree view (`V`) in top
