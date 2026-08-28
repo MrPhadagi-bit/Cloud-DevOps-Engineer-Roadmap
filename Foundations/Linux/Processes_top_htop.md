@@ -1,6 +1,5 @@
 # Linux Processes: `top` & `htop` Explained
 
-> **Reference Video:** [Linux Processes, top & htop Tutorial](https://youtu.be/nQhRRLgLFaQ?si=MY1wozAiMJMIEY5p)  
 > A comprehensive guide to understanding and managing Linux processes using `top` and `htop`.
 
 ---
@@ -200,17 +199,17 @@ Tasks: 235, 1 running
 
 | Color | Meaning |
 |-------|---------|
-| 🟢 **Green** | Normal (user) processes |
-| 🔴 **Red** | Kernel processes |
-| 🔵 **Blue** | Low-priority (nice) processes |
+|  **Green** | Normal (user) processes |
+|  **Red** | Kernel processes |
+|  **Blue** | Low-priority (nice) processes |
 
 #### Memory Bar Colors
 
 | Color | Meaning |
 |-------|---------|
-| 🟢 **Green** | Used memory pages |
-| 🔵 **Blue** | Buffer pages |
-| 🟡 **Yellow** | Cache pages |
+|  **Green** | Used memory pages |
+|  **Blue** | Buffer pages |
+|  **Yellow** | Cache pages |
 
 ### Interactive Commands in `htop`
 
@@ -275,7 +274,7 @@ The `S` column in both `top` and `htop` shows the current state of each process:
 | `t` | **Traced** | Stopped by debugger during tracing |
 | `X` | **Dead** | Should never be seen |
 
-> 💡 **Note:** `ps` shows substates like `Ss` (sleeping, session leader) or `R+` (running, foreground process group).
+>  **Note:** `ps` shows substates like `Ss` (sleeping, session leader) or `R+` (running, foreground process group).
 
 ### Zombie Processes
 
@@ -293,7 +292,7 @@ Understanding memory usage is critical for diagnosing performance issues:
 | `RES` | **Resident Memory** | Actual physical RAM the process is using right now. This is the most important metric for real memory consumption. |
 | `SHR` | **Shared Memory** | Memory shared with other processes (e.g., shared libraries). Subtracting this from RES gives a rough idea of private memory usage. |
 
-> 💡 **Rule of thumb:** Focus on `RES` when investigating memory hogs. `VIRT` can be misleadingly large.
+>  **Rule of thumb:** Focus on `RES` when investigating memory hogs. `VIRT` can be misleadingly large.
 
 ---
 
@@ -321,7 +320,7 @@ load average: 0.52, 0.58, 0.59
 - Load `4.0` → 100% utilized, fully loaded
 - Load `8.0` → 200% overloaded, significant queuing
 
-> 💡 **Pro Tip:** Combine load average with CPU `%id` (idle). High load + high idle = processes waiting on I/O (disk/network bottleneck).
+>  **Pro Tip:** Combine load average with CPU `%id` (idle). High load + high idle = processes waiting on I/O (disk/network bottleneck).
 
 ---
 
@@ -329,25 +328,25 @@ load average: 0.52, 0.58, 0.59
 
 | Feature | `top` | `htop` |
 |---------|-------|--------|
-| **Preinstalled** | ✅ Yes (virtually all Unix/Linux) | ❌ No (requires installation) |
+| **Preinstalled** |  Yes (virtually all Unix/Linux) |  No (requires installation) |
 | **Interface** | Text-based, static columns | ncurses-based, scrollable |
-| **Mouse Support** | ❌ No | ✅ Yes |
+| **Mouse Support** |  No |  Yes |
 | **Color Coding** | Basic | Rich, customizable |
-| **Tree View** | ❌ No | ✅ Yes (F5) |
-| **Search/Filter** | Limited | ✅ Incremental search & filter |
-| **Kill Process** | Manual PID entry | ✅ Visual signal selection |
-| **Bulk Operations** | ❌ No | ✅ Tag multiple processes |
-| **Setup/Customization** | Limited | ✅ Extensive (F2) |
-| **Scroll Process List** | ❌ No | ✅ Vertical & horizontal |
-| **CPU Bars** | ❌ No | ✅ Visual per-core bars |
-| **Batch Mode** | ✅ Yes (`-b`) | ❌ No |
+| **Tree View** |  No |  Yes (F5) |
+| **Search/Filter** | Limited |  Incremental search & filter |
+| **Kill Process** | Manual PID entry |  Visual signal selection |
+| **Bulk Operations** |  No |  Tag multiple processes |
+| **Setup/Customization** | Limited |  Extensive (F2) |
+| **Scroll Process List** |  No |  Vertical & horizontal |
+| **CPU Bars** |  No |  Visual per-core bars |
+| **Batch Mode** |  Yes (`-b`) |  No |
 | **Best For** | Quick checks, scripting | Interactive exploration |
 
 ---
 
 ## Practical Workflows
 
-### 🔥 Finding a Runaway Process
+###  Finding a Runaway Process
 
 ```bash
 # Step 1: Launch htop
@@ -362,7 +361,7 @@ htop
 # Step 5: Decide: investigate further, renice, or kill (F9)
 ```
 
-### 🧹 Killing a Frozen Application
+###  Killing a Frozen Application
 
 ```bash
 # Using top
@@ -374,7 +373,7 @@ htop
 # Navigate to process, press F9, select signal, Enter
 ```
 
-### 📊 Monitoring Specific Processes
+###  Monitoring Specific Processes
 
 ```bash
 # top: monitor specific PIDs
@@ -387,7 +386,7 @@ htop -u www-data
 htop -p 1234,5678
 ```
 
-### 📝 Capturing a Snapshot for Analysis
+###  Capturing a Snapshot for Analysis
 
 ```bash
 # Using ps for a detailed snapshot
@@ -399,7 +398,7 @@ top -bn1 > top_snapshot.txt
 # Using htop (no native batch mode – use ps or top instead)
 ```
 
-### 🌳 Viewing Process Hierarchy
+###  Viewing Process Hierarchy
 
 ```bash
 # htop tree view
@@ -412,7 +411,7 @@ pstree -a
 ps -ef --forest
 ```
 
-### 🔍 Searching for a Specific Process
+###  Searching for a Specific Process
 
 ```bash
 # Using ps and grep
@@ -470,7 +469,7 @@ Z  → Pause updates
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Linux `top` Manual Page](https://man7.org/linux/man-pages/man1/top.1.html)
 - [Linux `htop` Manual Page](https://man7.org/linux/man-pages/man1/htop.1.html)
@@ -479,7 +478,7 @@ Z  → Pause updates
 
 ---
 
-## ✅ Summary
+##  Summary
 
 | Tool | Best Use Case |
 |------|---------------|
@@ -487,8 +486,7 @@ Z  → Pause updates
 | `top` | Live monitoring on any system (always available) |
 | `htop` | Interactive exploration, visual monitoring, process management |
 
-> 🎯 **Pro Tip:** Start with `ps` for a quick look, use `top` when you need live data on a minimal system, and switch to `htop` when you want a powerful, interactive experience for deep investigation.
+>  **Pro Tip:** Start with `ps` for a quick look, use `top` when you need live data on a minimal system, and switch to `htop` when you want a powerful, interactive experience for deep investigation.
 
 ---
 
-*Generated with ❤️ for the Linux community. Based on the tutorial video [Linux Processes, top & htop](https://youtu.be/nQhRRLgLFaQ?si=MY1wozAiMJMIEY5p).*
