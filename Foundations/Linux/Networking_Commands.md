@@ -1,24 +1,9 @@
-# 🌐 Networking Commands Cheatsheet
+#  Networking Commands Cheatsheet
 
 > A comprehensive guide to essential networking commands for Linux, macOS, and Windows.  
-> Reference: [YouTube Video](https://youtu.be/vDWY3PuHMX8)
 
 ---
 
-## 📑 Table of Contents
-
-- [Connectivity Testing](#1-connectivity-testing)
-- [Network Configuration](#2-network-configuration)
-- [DNS & Name Resolution](#3-dns--name-resolution)
-- [Active Connections & Ports](#4-active-connections--ports)
-- [Routing](#5-routing)
-- [Packet Capture & Analysis](#6-packet-capture--analysis)
-- [Network Scanning & Security](#7-network-scanning--security)
-- [File Transfer & Remote Access](#8-file-transfer--remote-access)
-- [Advanced Utilities](#9-advanced-utilities)
-- [Quick Reference: Linux vs Windows](#-quick-reference-linux-vs-windows)
-
----
 
 ## 1. Connectivity Testing
 
@@ -657,11 +642,11 @@ telnet 192.168.1.1 22
 # Exit telnet: Ctrl+] then type 'quit'
 ```
 
-> ⚠️ **Note:** Telnet is unencrypted. Use `ssh` or `nc` instead for secure connections.
+>  **Note:** Telnet is unencrypted. Use `ssh` or `nc` instead for secure connections.
 
 ---
 
-## 🔀 Quick Reference: Linux vs Windows
+##  Quick Reference: Linux vs Windows
 
 | Task | Linux/macOS | Windows |
 |------|-------------|---------|
@@ -678,7 +663,7 @@ telnet 192.168.1.1 22
 
 ---
 
-## 💡 Pro Tips
+##  Pro Tips
 
 1. **Use `sudo`** for commands that need root access (packet capture, interface changes)
 2. **Combine commands** with pipes: `netstat -tulpn | grep :80`
@@ -688,7 +673,7 @@ telnet 192.168.1.1 22
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Wireshark](https://www.wireshark.org/) — GUI packet analyzer
 - [Nmap Documentation](https://nmap.org/book/) — Official Nmap guide
@@ -697,6 +682,5 @@ telnet 192.168.1.1 22
 
 ---
 
-*Made with ❤️ for network engineers, sysadmins, and developers.*
+*Made with  for network engineers, sysadmins, and developers.*
 
-*Reference Video: [Networking Commands You Should Know](https://youtu.be/vDWY3PuHMX8)*
