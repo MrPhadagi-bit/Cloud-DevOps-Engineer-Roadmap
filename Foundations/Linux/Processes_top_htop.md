@@ -1,31 +1,7 @@
-# 🖥️ Linux Processes: `top` & `htop` Explained
+# Linux Processes: `top` & `htop` Explained
 
 > **Reference Video:** [Linux Processes, top & htop Tutorial](https://youtu.be/nQhRRLgLFaQ?si=MY1wozAiMJMIEY5p)  
 > A comprehensive guide to understanding and managing Linux processes using `top` and `htop`.
-
----
-
-## 📑 Table of Contents
-
-- [What is a Process?](#what-is-a-process)
-- [Why Monitor Processes?](#why-monitor-processes)
-- [The `top` Command](#the-top-command)
-  - [Understanding the `top` Header](#understanding-the-top-header)
-  - [Process List Columns](#process-list-columns)
-  - [Interactive Commands in `top`](#interactive-commands-in-top)
-  - [Batch Mode](#batch-mode)
-- [The `htop` Command](#the-htop-command)
-  - [Installing `htop`](#installing-htop)
-  - [Understanding the `htop` Interface](#understanding-the-htop-interface)
-  - [Color Coding](#color-coding)
-  - [Interactive Commands in `htop`](#interactive-commands-in-htop)
-  - [Command-Line Options](#command-line-options)
-- [Process States Explained](#process-states-explained)
-- [Memory Metrics: VIRT, RES, SHR](#memory-metrics-virt-res-shr)
-- [Load Average Explained](#load-average-explained)
-- [`top` vs `htop`: Comparison](#top-vs-htop-comparison)
-- [Practical Workflows](#practical-workflows)
-- [Quick Reference Cheat Sheet](#quick-reference-cheat-sheet)
 
 ---
 
@@ -46,11 +22,11 @@ Processes form a **tree structure**: when a process launches another, it becomes
 ## Why Monitor Processes?
 
 Monitoring processes is essential for:
-- 🔍 **Troubleshooting** slow or unresponsive systems
-- 🧠 **Identifying** memory or CPU-heavy applications
-- 🧹 **Killing** unresponsive or runaway processes
-- 🛡️ **Monitoring** server performance in real-time
-- 📊 **Understanding** system resource utilization
+-  **Troubleshooting** slow or unresponsive systems
+- **Identifying** memory or CPU-heavy applications
+-  **Killing** unresponsive or runaway processes
+-  **Monitoring** server performance in real-time
+-  **Understanding** system resource utilization
 
 ---
 
