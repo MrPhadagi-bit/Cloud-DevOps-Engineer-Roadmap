@@ -1,37 +1,6 @@
 # Text Editors: Key Authentication (RSA & FTP)
 
 > A comprehensive guide to understanding and implementing RSA key authentication and FTP/SFTP key-based authentication when working with text editors, IDEs, and remote development environments.
->
-> **Reference Video:** [YouTube — Text Editors: Key Authentication](https://youtu.be/8Mt7SH2Voi0?si=Xq18AweCtW8-XGll)
-
----
-
-## Table of Contents
-
-- [1. Introduction](#1-introduction)
-- [2. Understanding Key Authentication](#2-understanding-key-authentication)
-  - [2.1 What is Public Key Cryptography?](#21-what-is-public-key-cryptography)
-  - [2.2 How RSA Key Authentication Works](#22-how-rsa-key-authentication-works)
-  - [2.3 FTP vs. SFTP vs. FTPS](#23-ftp-vs-sftp-vs-ftps)
-- [3. Generating RSA Key Pairs](#3-generating-rsa-key-pairs)
-  - [3.1 Using OpenSSH (Linux/macOS/Git Bash)](#31-using-openssh-linuxmacosgit-bash)
-  - [3.2 Using PuTTYgen (Windows)](#32-using-puttygen-windows)
-- [4. Configuring Key Authentication for Text Editors](#4-configuring-key-authentication-for-text-editors)
-  - [4.1 Visual Studio Code (VS Code)](#41-visual-studio-code-vs-code)
-  - [4.2 Sublime Text](#42-sublime-text)
-  - [4.3 Vim / Neovim](#43-vim--neovim)
-  - [4.4 Emacs](#44-emacs)
-  - [4.5 JetBrains IDEs](#45-jetbrains-ides)
-- [5. Setting Up SFTP Key Authentication](#5-setting-up-sftp-key-authentication)
-  - [5.1 Server-Side Configuration](#51-server-side-configuration)
-  - [5.2 Client-Side Configuration](#52-client-side-configuration)
-  - [5.3 Using ssh-copy-id](#53-using-ssh-copy-id)
-- [6. Common Text Editor SFTP Plugins & Extensions](#6-common-text-editor-sftp-plugins--extensions)
-- [7. Troubleshooting](#7-troubleshooting)
-- [8. Security Best Practices](#8-security-best-practices)
-- [9. Glossary](#9-glossary)
-- [10. Quick Reference Cheat Sheet](#10-quick-reference-cheat-sheet)
-
 ---
 
 ## 1. Introduction
@@ -103,9 +72,9 @@ Understanding the differences is critical when configuring your text editor:
 
 | Protocol | Encryption | Authentication | Port | Use Case |
 |----------|------------|----------------|------|----------|
-| **FTP** | ❌ None (plaintext) | Password only | 21 | ⚠️ Legacy — avoid for sensitive data |
-| **SFTP** | ✅ SSH encryption | Password or SSH Keys | 22 | ✅ Recommended — secure file transfer over SSH |
-| **FTPS** | ✅ TLS/SSL encryption | Password or Certificates | 21/990 | ✅ Secure, but more complex firewall rules |
+| **FTP** |  None (plaintext) | Password only | 21 |  Legacy — avoid for sensitive data |
+| **SFTP** |  SSH encryption | Password or SSH Keys | 22 |  Recommended — secure file transfer over SSH |
+| **FTPS** |  TLS/SSL encryption | Password or Certificates | 21/990 |  Secure, but more complex firewall rules |
 
 > **Recommendation:** Always prefer **SFTP** over FTP. SFTP uses the SSH protocol for both authentication and encryption, making it inherently more secure and easier to configure with key pairs.
 
@@ -487,16 +456,16 @@ echo "PASTE_KEY_HERE" >> ~/.ssh/authorized_keys
 
 | Text Editor / IDE | Plugin / Extension | Protocol | Key Support |
 |-------------------|-------------------|----------|-------------|
-| **VS Code** | Remote - SSH (Microsoft) | SSH/SFTP | ✅ OpenSSH, PuTTY |
-| **VS Code** | SFTP (liximomo) | SFTP | ✅ OpenSSH keys |
-| **Sublime Text** | SFTP (wbond) | SFTP/FTPS | ✅ OpenSSH, PuTTY |
-| **Atom** | remote-ftp | SFTP | ✅ OpenSSH keys |
-| **Vim/Neovim** | netrw (built-in) | SCP/SFTP | ✅ System SSH config |
-| **Vim/Neovim** | nvim-scp | SCP | ✅ OpenSSH keys |
-| **Emacs** | TRAMP (built-in) | SSH/SCP/SFTP | ✅ System SSH config |
-| **JetBrains** | Built-in Deployment | SFTP/FTPS | ✅ OpenSSH, PuTTY |
-| **Notepad++** | NppFTP | SFTP/FTPS | ✅ OpenSSH keys |
-| **Kate** | Built-in Network | SFTP | ✅ System SSH config |
+| **VS Code** | Remote - SSH (Microsoft) | SSH/SFTP |  OpenSSH, PuTTY |
+| **VS Code** | SFTP (liximomo) | SFTP |  OpenSSH keys |
+| **Sublime Text** | SFTP (wbond) | SFTP/FTPS |  OpenSSH, PuTTY |
+| **Atom** | remote-ftp | SFTP |  OpenSSH keys |
+| **Vim/Neovim** | netrw (built-in) | SCP/SFTP |  System SSH config |
+| **Vim/Neovim** | nvim-scp | SCP |  OpenSSH keys |
+| **Emacs** | TRAMP (built-in) | SSH/SCP/SFTP |  System SSH config |
+| **JetBrains** | Built-in Deployment | SFTP/FTPS |  OpenSSH, PuTTY |
+| **Notepad++** | NppFTP | SFTP/FTPS |  OpenSSH keys |
+| **Kate** | Built-in Network | SFTP |  System SSH config |
 
 ---
 
@@ -523,11 +492,11 @@ chmod 700 ~/.ssh
 **Symptom:** SSH/SFTP connection fails with a public key error.
 
 **Checklist:**
-1. ✅ Is the public key correctly added to `~/.ssh/authorized_keys` on the server?
-2. ✅ Are server permissions correct? (`700` for `.ssh`, `600` for `authorized_keys`)
-3. ✅ Is the private key path correct in your editor/IDE config?
-4. ✅ Did you enter the correct passphrase?
-5. ✅ Is the SSH service running on the server? (`sudo systemctl status sshd`)
+1.  Is the public key correctly added to `~/.ssh/authorized_keys` on the server?
+2.  Are server permissions correct? (`700` for `.ssh`, `600` for `authorized_keys`)
+3.  Is the private key path correct in your editor/IDE config?
+4.  Did you enter the correct passphrase?
+5.  Is the SSH service running on the server? (`sudo systemctl status sshd`)
 
 ### Issue: Text Editor Can't Find Private Key
 
@@ -561,18 +530,18 @@ ssh-add -K ~/.ssh/id_rsa
 
 ## 8. Security Best Practices
 
-### 🔐 Key Generation
+###  Key Generation
 - **Always use 4096-bit RSA keys** (or Ed25519 for modern systems).
 - **Always set a passphrase** on your private key.
 - **Never share your private key** — treat it like a password.
 
-### 🔐 Key Storage
+###  Key Storage
 - Store private keys in `~/.ssh/` with permissions `600`.
 - Use an **SSH agent** to avoid typing passphrases repeatedly.
 - On macOS, use the **Keychain** integration (`ssh-add -K`).
 - On Windows, use **Pageant** (PuTTY's SSH agent) if using PuTTY tools.
 
-### 🔐 Server Configuration
+###  Server Configuration
 - Disable password authentication once key auth is working:
   ```bash
   # In /etc/ssh/sshd_config
@@ -586,7 +555,7 @@ ssh-add -K ~/.ssh/id_rsa
   sudo service ssh restart      # macOS / older Linux
   ```
 
-### 🔐 Regular Maintenance
+###  Regular Maintenance
 - Rotate keys periodically (e.g., every 6–12 months).
 - Remove old or unused keys from `authorized_keys`:
   ```bash
