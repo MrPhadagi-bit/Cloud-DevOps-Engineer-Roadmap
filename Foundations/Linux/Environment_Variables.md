@@ -22,12 +22,12 @@ KEY=value
 
 ### Example in Code
 
-**❌ Hardcoded (Bad):**
+** Hardcoded (Bad):**
 ```javascript
 const apiKey = "sk-live-1234567890abcdef";
 ```
 
-**✅ Using Environment Variable (Good):**
+** Using Environment Variable (Good):**
 ```javascript
 const apiKey = process.env.API_KEY;
 ```
@@ -38,14 +38,14 @@ At runtime, `process.env.API_KEY` is replaced with the actual value stored in th
 
 ## 2. Why Use Environment Variables?
 
-### 🔒 1. Security
+###  1. Security
 Keep secrets (API keys, passwords, tokens) out of your source code and version control.
 
 > **Problem:** If you hardcode a secret API key and push to GitHub, anyone can see and abuse it.
 >
 > **Solution:** Store the key in an environment variable and reference it in code.
 
-### 🔄 2. Configuration Without Code Changes
+###  2. Configuration Without Code Changes
 Change behavior across environments (dev, staging, production) without modifying or redeploying code.
 
 | Environment | `NODE_ENV` | `DATABASE_URL` |
@@ -54,10 +54,10 @@ Change behavior across environments (dev, staging, production) without modifying
 | Staging | `staging` | `staging-db.example.com:5432` |
 | Production | `production` | `prod-db.example.com:5432` |
 
-### 🧪 3. Portability
+###  3. Portability
 The same codebase can run on different machines, servers, or containers with different configurations.
 
-### 🤝 4. Team Collaboration
+###  4. Team Collaboration
 Each developer can have their own local settings without conflicting with others.
 
 ---
@@ -218,7 +218,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 ```
 
-> ⚠️ **Windows users:** Use `cross-env` package for cross-platform compatibility:
+>  **Windows users:** Use `cross-env` package for cross-platform compatibility:
 > ```bash
 > npm install cross-env
 > ```
@@ -286,7 +286,7 @@ ENABLE_BETA_FEATURES=true
 
 | Rule | Why |
 |------|-----|
-| **No spaces around `=`** | `KEY=value` ✅ — `KEY = value` ❌ |
+| **No spaces around `=`** | `KEY=value`  — `KEY = value`  |
 | **Quote values with spaces** | `MESSAGE="Hello World"` |
 | **No quotes needed for simple values** | `PORT=3000` |
 | **Comments start with `#`** | `# This is a comment` |
@@ -317,7 +317,7 @@ from dotenv import load_dotenv
 load_dotenv()
 ```
 
-### ⚠️ CRITICAL: `.gitignore`
+### CRITICAL: `.gitignore`
 
 **NEVER** commit `.env` files to Git!
 
@@ -347,7 +347,7 @@ SMTP_PORT=
 
 ## 7. Best Practices
 
-### ✅ DO
+###  DO
 
 | Practice | Reason |
 |----------|--------|
@@ -359,7 +359,7 @@ SMTP_PORT=
 | **Validate at startup** | Fail fast if required vars are missing |
 | **Use different files per environment** | `.env.development`, `.env.production` |
 
-### ❌ DON'T
+###  DON'T
 
 | Practice | Reason |
 |----------|--------|
@@ -420,13 +420,13 @@ requiredEnvVars.forEach((varName) => {
 | `GATSBY_` | Gatsby | Public (bundled) |
 | `PUBLIC_` | SvelteKit | Public (bundled) |
 
-> ⚠️ **Important:** Only prefix variables with these if they are **safe to expose to the browser**. Never prefix secrets!
+>  **Important:** Only prefix variables with these if they are **safe to expose to the browser**. Never prefix secrets!
 
 ---
 
 ## 9. Security Considerations
 
-### 🔴 High Risk
+###  High Risk
 
 1. **Never commit secrets**
    ```bash
@@ -446,17 +446,17 @@ requiredEnvVars.forEach((varName) => {
 
 4. **Restrict frontend exposure**
    ```javascript
-   // ❌ DON'T — This gets bundled into client JS!
+   //  DON'T — This gets bundled into client JS!
    const secret = process.env.SECRET_KEY;
 
-   // ✅ DO — Only use public-prefixed vars in frontend
+   //  DO — Only use public-prefixed vars in frontend
    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
    ```
 
 5. **Validate and sanitize**
    Don't trust environment variable values blindly.
 
-### 🟡 Medium Risk
+###  Medium Risk
 
 - Use `.env.local` for machine-specific overrides
 - Keep `.env` files out of Docker images:
@@ -518,7 +518,7 @@ LOG_LEVEL=debug
 
 ---
 
-## 📚 Further Reading
+##  Further Reading
 
 - [Node.js `process.env` Documentation](https://nodejs.org/api/process.html#process_process_env)
 - [The Twelve-Factor App: Config](https://12factor.net/config)
@@ -526,12 +526,3 @@ LOG_LEVEL=debug
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 - [OWASP: Secrets Management](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
 
----
-
-## 📝 License
-
-This guide is provided as educational material. Feel free to use, modify, and share.
-
----
-
-> 💬 **Questions or suggestions?** Open an issue or submit a PR!
