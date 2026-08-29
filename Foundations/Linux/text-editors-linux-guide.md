@@ -1,25 +1,6 @@
-# 📝 Text Editors: The Most Powerful Linux Commands
+#  Text Editors: The Most Powerful Linux Commands
 
 > A comprehensive guide to mastering text editing in the Linux command line — from quick edits to advanced text processing.
-
----
-
-## 📑 Table of Contents
-
-- [Introduction](#introduction)
-- [Why Text Editors Matter in Linux](#why-text-editors-matter-in-linux)
-- [Command-Line vs. Graphical Editors](#command-line-vs-graphical-editors)
-- [The Essential Text Editors](#the-essential-text-editors)
-  - [1. Nano — The Beginner's Best Friend](#1-nano--the-beginners-best-friend)
-  - [2. Vim — The Power User's Choice](#2-vim--the-power-users-choice)
-  - [3. Emacs — The Extensible Giant](#3-emacs--the-extensible-giant)
-  - [4. Sed — The Stream Editor](#4-sed--the-stream-editor)
-  - [5. Awk — The Text Processing Language](#5-awk--the-text-processing-language)
-- [Quick Comparison Table](#quick-comparison-table)
-- [Practical Scenarios](#practical-scenarios)
-- [Pro Tips & Best Practices](#pro-tips--best-practices)
-- [Cheat Sheets](#cheat-sheets)
-- [Resources & References](#resources--references)
 
 ---
 
@@ -29,7 +10,7 @@ In the Linux ecosystem, **text is everything**. Configuration files, scripts, lo
 
 This guide covers the most powerful text editing tools available in Linux, from simple interactive editors like **Nano** to advanced processing engines like **Sed** and **Awk**.
 
-> 💡 **Key Insight**: Every Linux system comes with at least one text editor. Knowing which one to use and when can save hours of work.
+>  **Key Insight**: Every Linux system comes with at least one text editor. Knowing which one to use and when can save hours of work.
 
 ---
 
@@ -48,20 +29,20 @@ This guide covers the most powerful text editing tools available in Linux, from 
 ## Command-Line vs. Graphical Editors
 
 ### Command-Line Editors (Terminal)
-- ✅ Available on any system (even without a GUI)
-- ✅ Fast and lightweight
-- ✅ Perfect for remote/SSH work
-- ✅ Scriptable and automatable
-- ❌ Steeper learning curve
+-  Available on any system (even without a GUI)
+-  Fast and lightweight
+-  Perfect for remote/SSH work
+-  Scriptable and automatable
+-  Steeper learning curve
 
 **Examples**: `nano`, `vim`, `emacs`, `micro`, `ed`
 
 ### Graphical Editors (GUI)
-- ✅ User-friendly with menus and toolbars
-- ✅ Mouse support and visual feedback
-- ✅ Better for large projects
-- ❌ Require a desktop environment
-- ❌ Not available on headless servers
+-  User-friendly with menus and toolbars
+-  Mouse support and visual feedback
+-  Better for large projects
+-  Require a desktop environment
+-  Not available on headless servers
 
 **Examples**: `gedit`, `VS Code`, `Sublime Text`, `Kate`
 
@@ -102,10 +83,10 @@ nano +10 filename.txt
 | `Ctrl + C` | Show cursor position |
 
 #### When to Use Nano
-- ✅ Quick config file edits
-- ✅ Beginners learning Linux
-- ✅ Systems where you need zero learning curve
-- ✅ Simple note-taking
+-  Quick config file edits
+-  Beginners learning Linux
+-  Systems where you need zero learning curve
+-  Simple note-taking
 
 ---
 
@@ -212,11 +193,11 @@ set mouse=a             " Enable mouse support
 ```
 
 #### When to Use Vim
-- ✅ Server administration and remote editing
-- ✅ Programming and development
-- ✅ Large file editing
-- ✅ When you need maximum efficiency
-- ✅ Any system where `vi` is guaranteed to exist
+-  Server administration and remote editing
+-  Programming and development
+-  Large file editing
+-  When you need maximum efficiency
+-  Any system where `vi` is guaranteed to exist
 
 ---
 
@@ -253,10 +234,10 @@ emacs file1.txt file2.txt
 | `Ctrl + X` `Ctrl + B` | List buffers |
 
 #### When to Use Emacs
-- ✅ Deep customization and extensibility
-- ✅ Programming with IDE-like features
-- ✅ Users who want an all-in-one environment
-- ✅ Lisp enthusiasts
+-  Deep customization and extensibility
+-  Programming with IDE-like features
+-  Users who want an all-in-one environment
+-  Lisp enthusiasts
 
 ---
 
@@ -344,17 +325,18 @@ sed 's/^[ 	]*//' file.txt
 sed 's/[ 	]*$//' file.txt
 
 # Convert DOS to Unix line endings
-sed 's/$//' file.txt > unix_file.txt
+sed 's/
+$//' file.txt > unix_file.txt
 
 # Extract email addresses from a file
 sed -n 's/.*\([a-zA-Z0-9._%+-]\+@[a-zA-Z0-9.-]\+\.[a-zA-Z]\{2,\}\).*//p' file.txt
 ```
 
 #### When to Use Sed
-- ✅ Batch file processing and automation
-- ✅ One-liner text transformations
-- ✅ Scripts that need to modify files without opening an editor
-- ✅ Pipeline text processing
+-  Batch file processing and automation
+-  One-liner text transformations
+-  Scripts that need to modify files without opening an editor
+-  Pipeline text processing
 
 ---
 
@@ -503,11 +485,11 @@ chmod +x script.awk
 ```
 
 #### When to Use Awk
-- ✅ Processing structured text data (CSV, logs, tables)
-- ✅ Calculations and summaries on text data
-- ✅ Complex filtering and reporting
-- ✅ One-liner data analysis
-- ✅ Replacing simple database queries on text files
+-  Processing structured text data (CSV, logs, tables)
+-  Calculations and summaries on text data
+-  Complex filtering and reporting
+-  One-liner data analysis
+-  Replacing simple database queries on text files
 
 ---
 
@@ -516,10 +498,10 @@ chmod +x script.awk
 | Feature | Nano | Vim | Emacs | Sed | Awk |
 |---------|------|-----|-------|-----|-----|
 | **Learning Curve** | Very Easy | Steep | Steep | Moderate | Moderate |
-| **Interactivity** | ✅ Full | ✅ Full | ✅ Full | ❌ None | ❌ None |
-| **Remote/SSH** | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
-| **Automation** | ❌ No | ❌ No | ❌ No | ✅ Yes | ✅ Yes |
-| **Syntax Highlight** | Basic | Excellent | Excellent | ❌ No | ❌ No |
+| **Interactivity** |  Full |  Full |  Full |  None |  None |
+| **Remote/SSH** |  Yes |  Yes |  Yes |  Yes |  Yes |
+| **Automation** |  No |  No |  No |  Yes |  Yes |
+| **Syntax Highlight** | Basic | Excellent | Excellent |  No |  No |
 | **Customization** | Minimal | Extensive | Unlimited | Moderate | Moderate |
 | **Best For** | Quick edits | Programming | Everything | Batch replace | Data processing |
 | **Availability** | Most systems | All Unix systems | Most systems | All Unix systems | All Unix systems |
@@ -576,7 +558,7 @@ ps aux | awk '$3 > 10.0 {print $3"%", $11}' | sort -rn
 
 ## Pro Tips & Best Practices
 
-### 🎯 Choose the Right Tool
+###  Choose the Right Tool
 
 | Task | Recommended Tool |
 |------|-----------------|
@@ -587,7 +569,7 @@ ps aux | awk '$3 > 10.0 {print $3"%", $11}' | sort -rn
 | Complex multi-step editing | `vim` macros or `perl` |
 | Remote server work | `vim` or `nano` |
 
-### 🚀 Vim Productivity Tips
+###  Vim Productivity Tips
 
 1. **Learn motions first**: `w`, `b`, `e`, `0`, `$`, `gg`, `G`
 2. **Use text objects**: `ciw` (change inner word), `ci"` (change inside quotes)
@@ -595,13 +577,13 @@ ps aux | awk '$3 > 10.0 {print $3"%", $11}' | sort -rn
 4. **Use `.`**: It repeats the last action — incredibly powerful
 5. **Split windows**: `:split` and `:vsplit` for multi-file editing
 
-### 🔧 Sed Safety Tips
+###  Sed Safety Tips
 
 1. **Always test first**: Run without `-i` to preview changes
 2. **Create backups**: Use `sed -i.bak` before in-place editing
 3. **Escape carefully**: Special characters need escaping — use alternate delimiters when working with paths
 
-### 📊 Awk Best Practices
+###  Awk Best Practices
 
 1. **Use `-F` for structured data**: CSV, TSV, log files with delimiters
 2. **Leverage `BEGIN`/`END`**: For headers, footers, and calculations
@@ -716,7 +698,7 @@ awk 'BEGIN {...} {...} END {...}'  # Setup and cleanup
 
 ---
 
-## 🏆 Conclusion
+##  Conclusion
 
 Mastering Linux text editors is one of the highest-ROI skills you can develop as a developer or system administrator. Start with **Nano** for immediate productivity, graduate to **Vim** for power and ubiquity, and learn **Sed** and **Awk** for automation and data processing.
 
@@ -724,6 +706,6 @@ Mastering Linux text editors is one of the highest-ROI skills you can develop as
 
 ---
 
-*Happy Editing! 🐧*
+*Happy Editing! *
 
-*If you found this guide helpful, please ⭐ star this repository and share it with fellow Linux enthusiasts!*
+*If you found this guide helpful, please  star this repository and share it with fellow Linux enthusiasts!*
