@@ -1,27 +1,7 @@
-# 🐧 Advanced Linux Commands
+#  Advanced Linux Commands
 
 > A comprehensive guide to advanced Linux commands for system administrators, DevOps engineers, developers, and power users.
->
-> 📺 **Reference:** [YouTube Tutorial](https://youtu.be/Uq1roUHF3xc?si=pyRdk9cFRkNcNTgx)
-
----
-
-## 📑 Table of Contents
-
-- [1. File & Directory Operations](#1-file--directory-operations)
-- [2. File Permissions & Ownership](#2-file-permissions--ownership)
-- [3. Text Processing & Manipulation](#3-text-processing--manipulation)
-- [4. Process Management](#4-process-management)
-- [5. System Monitoring & Information](#5-system-monitoring--information)
-- [6. Networking Commands](#6-networking-commands)
-- [7. Disk & Filesystem Management](#7-disk--filesystem-management)
-- [8. User & Group Management](#8-user--group-management)
-- [9. Compression & Archiving](#9-compression--archiving)
-- [10. Package Management](#10-package-management)
-- [11. Job Scheduling](#11-job-scheduling)
-- [12. Bash Shortcuts & Tips](#12-bash-shortcuts--tips)
-- [13. Dangerous Commands to Avoid](#13-dangerous-commands-to-avoid)
-
+> 
 ---
 
 ## 1. File & Directory Operations
@@ -1132,7 +1112,7 @@ dd if=/dev/zero of=file.img bs=1M count=1024
 sudo dd if=/dev/sda of=/dev/sdb bs=4M status=progress
 ```
 
-⚠️ **Warning:** `dd` is extremely powerful. Double-check `if=` (input file) and `of=` (output file) before executing!
+ **Warning:** `dd` is extremely powerful. Double-check `if=` (input file) and `of=` (output file) before executing!
 
 ### `parted` — Partition Editor
 Partition manipulation program.
@@ -1681,7 +1661,7 @@ EOF
 
 ## 13. Dangerous Commands to Avoid
 
-> ⚠️ **WARNING:** These commands can cause irreversible damage. Use with extreme caution!
+>  **WARNING:** These commands can cause irreversible damage. Use with extreme caution!
 
 | Command | Risk | Safer Alternative |
 |---------|------|-------------------|
@@ -1705,7 +1685,7 @@ EOF
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Linux Commands Cheat Sheet - GeeksforGeeks](https://www.geeksforgeeks.org/linux-unix/linux-commands-cheat-sheet/)
 - [Advanced Linux Commands Cheat Sheet - Red Hat](https://developers.redhat.com/cheat-sheets/advanced-linux-commands)
@@ -1714,16 +1694,16 @@ EOF
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Feel free to contribute by submitting a pull request. Suggestions for new commands, corrections, or improvements are always welcome!
 
 ---
 
-## 📄 License
+##  License
 
 This guide is provided as-is for educational purposes. Use the commands at your own risk.
 
 ---
 
-> 💡 **Pro Tip:** Bookmark this page and refer back to it as you level up your Linux skills. Practice these commands in a safe environment like a VM or Docker container before using them on production systems!
+>  **Pro Tip:** Bookmark this page and refer back to it as you level up your Linux skills. Practice these commands in a safe environment like a VM or Docker container before using them on production systems!
