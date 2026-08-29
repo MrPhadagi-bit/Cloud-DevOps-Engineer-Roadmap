@@ -1,33 +1,6 @@
 # Text Editors: Nano, Vim, Emacs
 
-> A comprehensive guide to the three most popular terminal-based text editors in Linux/Unix systems.
-> Reference: [YouTube Tutorial](https://youtu.be/zk6hZbWnhEs?si=Ea2IFZSbog4J8Y26)
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Nano](#nano)
-  - [What is Nano?](#what-is-nano)
-  - [Key Features](#key-features)
-  - [Basic Commands](#basic-commands)
-  - [When to Use Nano](#when-to-use-nano)
-- [Vim](#vim)
-  - [What is Vim?](#what-is-vim)
-  - [Key Features](#key-features-1)
-  - [Modes in Vim](#modes-in-vim)
-  - [Essential Commands](#essential-commands)
-  - [When to Use Vim](#when-to-use-vim)
-- [Emacs](#emacs)
-  - [What is Emacs?](#what-is-emacs)
-  - [Key Features](#key-features-2)
-  - [Essential Commands](#essential-commands-1)
-  - [When to Use Emacs](#when-to-use-emacs)
-- [Comparison](#comparison)
-- [The Editor Wars](#the-editor-wars)
-- [Which One Should You Choose?](#which-one-should-you-choose)
-- [Resources](#resources)
+> A comprehensive guide to the three most popular terminal-based text editors in Linux/Unix systems
 
 ---
 
@@ -117,13 +90,13 @@ set tabsize 4
 
 ### When to Use Nano
 
-- ✅ **Beginners** who are new to the command line
-- ✅ **Quick configuration edits** on remote servers
-- ✅ **Simple text editing** without complex operations
-- ✅ **Emergency/recovery mode** (Nano is often available in minimal environments)
-- ✅ **Casual Linux users** who need an occasional text editor
+-  **Beginners** who are new to the command line
+-  **Quick configuration edits** on remote servers
+-  **Simple text editing** without complex operations
+-  **Emergency/recovery mode** (Nano is often available in minimal environments)
+-  **Casual Linux users** who need an occasional text editor
 
-> 💡 **Pro Tip**: Nano is often the default editor in recovery mode because it's lightweight and universally available.
+>  **Pro Tip**: Nano is often the default editor in recovery mode because it's lightweight and universally available.
 
 ---
 
@@ -265,13 +238,13 @@ colorscheme desert
 
 ### When to Use Vim
 
-- ✅ **System administrators** who work on remote servers
-- ✅ **Programmers** who edit code frequently
-- ✅ **Power users** who want maximum editing efficiency
-- ✅ **Anyone** who needs a lightweight, fast editor
-- ✅ **Users** who value keyboard-centric workflows
+-  **System administrators** who work on remote servers
+-  **Programmers** who edit code frequently
+-  **Power users** who want maximum editing efficiency
+-  **Anyone** who needs a lightweight, fast editor
+-  **Users** who value keyboard-centric workflows
 
-> ⚠️ **Note**: Vim has a steep learning curve. The famous joke *"How do I exit Vim?!"* exists for a reason. But once learned, it becomes second nature.
+>  **Note**: Vim has a steep learning curve. The famous joke *"How do I exit Vim?!"* exists for a reason. But once learned, it becomes second nature.
 
 ---
 
@@ -393,13 +366,13 @@ Emacs is configured via the `~/.emacs` or `~/.emacs.d/init.el` file:
 
 ### When to Use Emacs
 
-- ✅ **Developers** who want a complete development environment
-- ✅ **Writers** who use Org Mode for note-taking and document creation
-- ✅ **Power users** who want deep customization
-- ✅ **Lisp programmers** who enjoy Elisp
-- ✅ **Users** who want everything in one application (editor, email, browser, etc.)
+-  **Developers** who want a complete development environment
+-  **Writers** who use Org Mode for note-taking and document creation
+-  **Power users** who want deep customization
+-  **Lisp programmers** who enjoy Elisp
+-  **Users** who want everything in one application (editor, email, browser, etc.)
 
-> ⚠️ **Note**: Emacs is not installed by default on all systems. On minimal server installations, you may need to install it first.
+>  **Note**: Emacs is not installed by default on all systems. On minimal server installations, you may need to install it first.
 
 ---
 
@@ -523,8 +496,5 @@ C-x b    → Switch buffer
 
 ---
 
-> 📝 **Note**: This guide is intended as a starting point. All three editors have far more features than can be covered in a single document. The best way to learn is to practice regularly and consult the built-in help systems (`Ctrl+G` in Nano, `:help` in Vim, `C-h` in Emacs).
+>  **Note**: This guide is intended as a starting point. All three editors have far more features than can be covered in a single document. The best way to learn is to practice regularly and consult the built-in help systems (`Ctrl+G` in Nano, `:help` in Vim, `C-h` in Emacs).
 
----
-
-*Last updated: 2026-08-29*
