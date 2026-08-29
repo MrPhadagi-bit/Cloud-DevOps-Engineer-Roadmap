@@ -1,34 +1,12 @@
-# 🌍 Environment Variables — Complete Guide
-
-> **Reference:** [YouTube Tutorial](https://youtu.be/yM8v5i2Qjgg?si=mxLwn2uJ4Vk0pJQJ)  
-> **Last Updated:** August 2026
-
+#  Environment Variables — Complete Guide
 ---
 
-## 📋 Table of Contents
-
-1. [What Are Environment Variables?](#1-what-are-environment-variables)
-2. [Why Use Environment Variables?](#2-why-use-environment-variables)
-3. [Types of Environment Variables](#3-types-of-environment-variables)
-4. [Common Use Cases](#4-common-use-cases)
-5. [Setting Environment Variables](#5-setting-environment-variables)
-   - [Linux / macOS](#linux--macos)
-   - [Windows](#windows)
-   - [Node.js / JavaScript](#nodejs--javascript)
-   - [Python](#python)
-6. [The `.env` File](#6-the-env-file)
-7. [Best Practices](#7-best-practices)
-8. [Common Environment Variables](#8-common-environment-variables)
-9. [Security Considerations](#9-security-considerations)
-10. [Quick Reference Cheat Sheet](#10-quick-reference-cheat-sheet)
-
----
 
 ## 1. What Are Environment Variables?
 
 An **environment variable** is a dynamically set, user-definable **key-value pair** that affects how running processes behave on a computer. They are part of the environment in which a process runs.
 
-> 💡 **Think of it as:** A configuration setting that lives *outside* your code but can be read *by* your code at runtime.
+>  **Think of it as:** A configuration setting that lives *outside* your code but can be read *by* your code at runtime.
 
 ### Basic Structure
 
