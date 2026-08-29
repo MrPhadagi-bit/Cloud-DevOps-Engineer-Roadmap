@@ -4,38 +4,6 @@
 
 ---
 
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Prerequisites](#prerequisites)
-3. [Part 1: Running a Local Python Web Server](#part-1-running-a-local-python-web-server)
-   - [Using Python's Built-in HTTP Server](#using-pythons-built-in-http-server)
-   - [Building a Simple Flask Application](#building-a-simple-flask-application)
-4. [Part 2: Preparing for Production](#part-2-preparing-for-production)
-   - [Why Not Use the Development Server in Production?](#why-not-use-the-development-server-in-production)
-   - [Project Structure](#project-structure)
-   - [Dependencies & Virtual Environments](#dependencies--virtual-environments)
-5. [Part 3: Production Application Server (Gunicorn)](#part-3-production-application-server-gunicorn)
-   - [What is WSGI?](#what-is-wsgi)
-   - [Installing & Running Gunicorn](#installing--running-gunicorn)
-   - [Configuring Gunicorn Workers](#configuring-gunicorn-workers)
-6. [Part 4: Reverse Proxy with Nginx](#part-4-reverse-proxy-with-nginx)
-   - [What is a Reverse Proxy?](#what-is-a-reverse-proxy)
-   - [Installing Nginx](#installing-nginx)
-   - [Configuring Nginx](#configuring-nginx)
-7. [Part 5: Process Management with systemd](#part-5-process-management-with-systemd)
-   - [Creating a systemd Service](#creating-a-systemd-service)
-   - [Managing the Service](#managing-the-service)
-8. [Part 6: HTTPS with Let's Encrypt](#part-6-https-with-lets-encrypt)
-   - [Installing Certbot](#installing-certbot)
-   - [Obtaining & Auto-Renewing Certificates](#obtaining--auto-renewing-certificates)
-9. [Part 7: Domain & DNS Setup](#part-7-domain--dns-setup)
-10. [Part 8: Security Hardening](#part-8-security-hardening)
-11. [Complete Deployment Checklist](#complete-deployment-checklist)
-12. [Troubleshooting](#troubleshooting)
-13. [References](#references)
-
----
 
 ## Overview
 
