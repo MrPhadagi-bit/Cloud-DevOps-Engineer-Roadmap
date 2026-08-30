@@ -1,52 +1,6 @@
 # Linux Users and Groups
 
 > A comprehensive guide to understanding and managing users, groups, and permissions in Linux.
-> 
-> **Reference:** [Linux Users and Groups Tutorial](https://youtu.be/b-9j2jiCOEA?si=i5FEw-qaKElw-t8B)
-
----
-
-## Table of Contents
-
-- [1. Introduction](#1-introduction)
-- [2. Understanding Linux Users](#2-understanding-linux-users)
-  - [2.1 Types of Users](#21-types-of-users)
-  - [2.2 User Identification (UID)](#22-user-identification-uid)
-  - [2.3 User Properties](#23-user-properties)
-- [3. Understanding Linux Groups](#3-understanding-linux-groups)
-  - [3.1 Primary vs. Secondary Groups](#31-primary-vs-secondary-groups)
-  - [3.2 Group Identification (GID)](#32-group-identification-gid)
-  - [3.3 Built-in vs. Custom Groups](#33-built-in-vs-custom-groups)
-- [4. Core System Files](#4-core-system-files)
-  - [4.1 /etc/passwd](#41-etcpasswd)
-  - [4.2 /etc/shadow](#42-etcshadow)
-  - [4.3 /etc/group](#43-etcgroup)
-- [5. File Permissions](#5-file-permissions)
-  - [5.1 Permission Types](#51-permission-types)
-  - [5.2 Permission Classes](#52-permission-classes)
-  - [5.3 Numeric (Octal) Notation](#53-numeric-octal-notation)
-  - [5.4 Symbolic Notation](#54-symbolic-notation)
-  - [5.5 Default Permissions](#55-default-permissions)
-- [6. User Management Commands](#6-user-management-commands)
-  - [6.1 Creating Users](#61-creating-users)
-  - [6.2 Modifying Users](#62-modifying-users)
-  - [6.3 Deleting Users](#63-deleting-users)
-  - [6.4 Password Management](#64-password-management)
-- [7. Group Management Commands](#7-group-management-commands)
-  - [7.1 Creating Groups](#71-creating-groups)
-  - [7.2 Modifying Groups](#72-modifying-groups)
-  - [7.3 Deleting Groups](#73-deleting-groups)
-  - [7.4 Managing Group Members](#74-managing-group-members)
-- [8. Permission Management Commands](#8-permission-management-commands)
-  - [8.1 chmod - Change Mode](#81-chmod---change-mode)
-  - [8.2 chown - Change Owner](#82-chown---change-owner)
-  - [8.3 chgrp - Change Group](#83-chgrp---change-group)
-- [9. Privilege Escalation](#9-privilege-escalation)
-  - [9.1 su - Switch User](#91-su---switch-user)
-  - [9.2 sudo - Superuser Do](#92-sudo---superuser-do)
-  - [9.3 Configuring sudo](#93-configuring-sudo)
-- [10. Best Practices](#10-best-practices)
-- [11. Quick Reference Cheat Sheet](#11-quick-reference-cheat-sheet)
 
 ---
 
@@ -78,7 +32,7 @@ Linux categorizes users into three main types:
 | **System Users** | `1` – `999` | Accounts created for system services and daemons (e.g., `www-data`, `mysql`, `sshd`). These users cannot log in interactively and exist only to run specific services with restricted permissions. |
 | **Regular Users** | `1000+` | Human users created by administrators. Each regular user has a home directory and can log in interactively. |
 
-> **⚠️ Warning:** Operating as root is dangerous! You can accidentally delete critical system files or compromise security. Always use `sudo` for administrative tasks instead of logging in as root.
+> ** Warning:** Operating as root is dangerous! You can accidentally delete critical system files or compromise security. Always use `sudo` for administrative tasks instead of logging in as root.
 
 ### 2.2 User Identification (UID)
 
@@ -531,7 +485,7 @@ sudo usermod -G group1,group2 username
 
 # Append user to secondary groups (preserves existing)
 sudo usermod -aG group1,group2 username
-# ⚠️ Always use -a (append) with -G to avoid removing existing groups!
+#  Always use -a (append) with -G to avoid removing existing groups!
 
 # Lock a user account
 sudo usermod -L username
@@ -560,7 +514,7 @@ sudo userdel --remove username
 sudo userdel -r --remove-all-files username
 ```
 
-> **⚠️ Warning:** `userdel -r` is irreversible. Always back up important data before removing a user.
+> ** Warning:** `userdel -r` is irreversible. Always back up important data before removing a user.
 
 ### 6.4 Password Management
 
@@ -648,7 +602,7 @@ sudo groupmod -g 3000 groupname
 sudo groupdel groupname
 ```
 
-> **⚠️ Note:** You cannot delete a group that is a user's primary group. Change the user's primary group first.
+> ** Note:** You cannot delete a group that is a user's primary group. Change the user's primary group first.
 
 ### 7.4 Managing Group Members
 
@@ -837,7 +791,7 @@ sudo -n command
 
 The `sudoers` file controls who can use `sudo` and what they can do.
 
-> **⚠️ CRITICAL:** Always edit `/etc/sudoers` using `visudo` to prevent syntax errors that could lock you out of root access!
+> ** CRITICAL:** Always edit `/etc/sudoers` using `visudo` to prevent syntax errors that could lock you out of root access!
 
 ```bash
 # Safely edit sudoers file
