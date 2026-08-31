@@ -1,3 +1,3 @@
 # Linux
 
-This section is a learning Linux for programmers series.
+This section is a Linux learning series for programmers.
