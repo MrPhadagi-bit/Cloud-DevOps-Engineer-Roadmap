@@ -1,36 +1,6 @@
 # Shell Scripts
 
 > A comprehensive guide to Shell Scripting — from basics to real-world automation.  
-> Based on the [ProgrammingKnowledge Shell Scripting Tutorial for Beginners](https://www.youtube.com/playlist?list=PLS1QulWo1RIaAsfcLW-Jk-Cx3JGRP8tjh) and extended with best practices, advanced patterns, and production-ready examples.
-
----
-
-## Table of Contents
-
-1. [What is a Shell?](#1-what-is-a-shell)
-2. [What is a Shell Script?](#2-what-is-a-shell-script)
-3. [Setting Up Your Environment](#3-setting-up-your-environment)
-4. [Your First Script](#4-your-first-script)
-5. [Variables](#5-variables)
-6. [Reading User Input](#6-reading-user-input)
-7. [Command Substitution](#7-command-substitution)
-8. [Passing Arguments to Scripts](#8-passing-arguments-to-scripts)
-9. [Operators](#9-operators)
-10. [Conditional Statements](#10-conditional-statements)
-11. [Case Statements](#11-case-statements)
-12. [Arrays](#12-arrays)
-13. [Loops](#13-loops)
-14. [Functions](#14-functions)
-15. [Break and Continue](#15-break-and-continue)
-16. [The `test` Command](#16-the-test-command)
-17. [String Manipulation](#17-string-manipulation)
-18. [File Operations](#18-file-operations)
-19. [Process Management](#19-process-management)
-20. [Error Handling & Debugging](#20-error-handling--debugging)
-21. [Real-World Examples](#21-real-world-examples)
-22. [Best Practices](#22-best-practices)
-23. [Resources](#23-resources)
-
 ---
 
 ## 1. What is a Shell?
