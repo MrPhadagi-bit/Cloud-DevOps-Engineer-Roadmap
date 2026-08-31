@@ -1,40 +1,6 @@
-# 🐧 Linux Processes, `top` & `htop` — The Complete Guide
+#  Linux Processes, `top` & `htop` — The Complete Guide
 
 > A comprehensive, well-documented reference for understanding Linux processes and mastering the `top` and `htop` process monitoring tools.
->
-> **Reference:** [YouTube Tutorial](https://youtu.be/nQhRRLgLFaQ)
-
----
-
-## 📑 Table of Contents
-
-- [1. Understanding Linux Processes](#1-understanding-linux-processes)
-  - [What is a Process?](#what-is-a-process)
-  - [Process Identification (PID & PPID)](#process-identification-pid--ppid)
-  - [Process States](#process-states)
-  - [Process Hierarchy (Parent & Child)](#process-hierarchy-parent--child)
-  - [Process Memory Model](#process-memory-model)
-  - [Signals & Inter-Process Communication](#signals--inter-process-communication)
-- [2. The `top` Command](#2-the-top-command)
-  - [What is `top`?](#what-is-top)
-  - [Understanding the `top` Display](#understanding-the-top-display)
-  - [Interactive Commands in `top`](#interactive-commands-in-top)
-  - [Batch Mode for Scripting](#batch-mode-for-scripting)
-- [3. The `htop` Command](#3-the-htop-command)
-  - [What is `htop`?](#what-is-htop)
-  - [Installing `htop`](#installing-htop)
-  - [Understanding the `htop` Display](#understanding-the-htop-display)
-  - [Interactive Commands in `htop`](#interactive-commands-in-htop)
-  - [Tree View](#tree-view)
-  - [Configuration & Customization](#configuration--customization)
-- [4. `top` vs `htop` — Comparison](#4-top-vs-htop--comparison)
-- [5. Practical Workflows & Use Cases](#5-practical-workflows--use-cases)
-  - [Finding Runaway Processes](#finding-runaway-processes)
-  - [Killing Unresponsive Processes](#killing-unresponsive-processes)
-  - [Monitoring Memory Pressure](#monitoring-memory-pressure)
-  - [Checking Process Hierarchy](#checking-process-hierarchy)
-- [6. Glossary of Key Terms](#6-glossary-of-key-terms)
-- [7. Quick Reference Cheat Sheet](#7-quick-reference-cheat-sheet)
 
 ---
 
@@ -53,7 +19,7 @@ A **process** is an instance of a program that is being executed. When you run a
 
 Linux is a **multitasking** operating system, meaning multiple processes can run simultaneously. Even on a single-core CPU, this is achieved through **time slicing** — the kernel rapidly switches between processes, giving each a small slice of CPU time (typically a few milliseconds). This happens so fast that it appears as if all processes are running at the same time.
 
-> 💡 **Key Insight:** The Linux kernel internally refers to processes as **tasks**. That's why tools like `htop` use "Tasks" instead of "Processes" in their headers.
+>  **Key Insight:** The Linux kernel internally refers to processes as **tasks**. That's why tools like `htop` use "Tasks" instead of "Processes" in their headers.
 
 ---
 
@@ -77,7 +43,7 @@ systemd (PID 1)
                     └── htop
 ```
 
-> 🔑 **The dash before `-bash`:** When a shell is launched as `-bash` (with a leading dash), it is a **login shell**. This causes it to read a different set of configuration files (`/etc/profile`, `~/.bash_profile`, etc.) compared to a non-login shell.
+>  **The dash before `-bash`:** When a shell is launched as `-bash` (with a leading dash), it is a **login shell**. This causes it to read a different set of configuration files (`/etc/profile`, `~/.bash_profile`, etc.) compared to a non-login shell.
 
 ---
 
@@ -147,7 +113,7 @@ $ ps f
 12684 pts/0    R+     0:00  \_ ps f
 ```
 
-> 🌳 **Why it matters:** Understanding the tree helps you identify which service spawned a problematic process, or which shell is running a runaway script.
+>  **Why it matters:** Understanding the tree helps you identify which service spawned a problematic process, or which shell is running a runaway script.
 
 ---
 
@@ -165,7 +131,7 @@ Each process has its own virtual memory space, divided into several segments:
 | **STACK** | Local variables, function parameters, and return addresses. |
 | **HEAP** | Dynamically allocated memory (via `malloc`, `new`, etc.). |
 
-> 💡 **Key Insight:** A process can have high VIRT but low RES if it has mapped large files or allocated memory it hasn't actually touched yet. Focus on **RES** for real memory usage.
+>  **Key Insight:** A process can have high VIRT but low RES if it has mapped large files or allocated memory it hasn't actually touched yet. Focus on **RES** for real memory usage.
 
 ---
 
@@ -196,7 +162,7 @@ kill -HUP 1234      # SIGHUP (reload config)
 # In htop: press F9, select signal, then Enter
 ```
 
-> ⚠️ **Best Practice:** Always try `SIGTERM` (15) first. Only use `SIGKILL` (9) when a process refuses to die, because SIGKILL doesn't allow the process to clean up resources.
+>  **Best Practice:** Always try `SIGTERM` (15) first. Only use `SIGKILL` (9) when a process refuses to die, because SIGKILL doesn't allow the process to clean up resources.
 
 ---
 
@@ -240,7 +206,7 @@ MiB Swap:   2048.0 total,   2047.5 free,      0.5 used.   3876.4 avail Mem
 | `2 users` | Number of logged-in users |
 | `load average: 0.23, 0.18, 0.15` | Average number of runnable processes over the last 1, 5, and 15 minutes |
 
-> 📊 **Load Average Explained:** The load average represents the average number of processes that are either running or waiting to run. On a single-core CPU, a load of `1.0` means 100% utilization. On a 4-core CPU, `4.0` is full capacity. Values above your core count indicate the system is overloaded.
+>  **Load Average Explained:** The load average represents the average number of processes that are either running or waiting to run. On a single-core CPU, a load of `1.0` means 100% utilization. On a 4-core CPU, `4.0` is full capacity. Values above your core count indicate the system is overloaded.
 
 **Line 2 — Task Summary:**
 
@@ -343,7 +309,7 @@ top -b -n 1 -u www-data
 top -b -d 2 -n 5 > /tmp/top-log.txt
 ```
 
-> 📌 **Tip:** Use `top -b` in cron jobs or monitoring scripts to capture periodic system snapshots.
+>  **Tip:** Use `top -b` in cron jobs or monitoring scripts to capture periodic system snapshots.
 
 ---
 
@@ -360,7 +326,7 @@ top -b -d 2 -n 5 > /tmp/top-log.txt
 - Ability to select multiple processes and act on them simultaneously
 - No need to type PIDs for killing or renicing
 
-> 🎯 **Key Advantage:** `htop` is fully interactive. You can navigate with arrow keys, click with your mouse, and manage processes without memorizing cryptic single-letter commands.
+>  **Key Advantage:** `htop` is fully interactive. You can navigate with arrow keys, click with your mouse, and manage processes without memorizing cryptic single-letter commands.
 
 ---
 
@@ -416,19 +382,19 @@ Each bar represents one CPU core. The colored segments indicate:
 
 | Color | Meaning |
 |-------|---------|
-| 🟢 Green | Normal (user) processes |
-| 🔴 Red | Kernel/system processes |
-| 🔵 Blue | Low-priority (nice) processes |
-| 🟡 Yellow / Orange | IRQ time (hardware interrupts) |
-| 🩶 Gray | I/O wait |
+|  Green | Normal (user) processes |
+|  Red | Kernel/system processes |
+|  Blue | Low-priority (nice) processes |
+|  Yellow / Orange | IRQ time (hardware interrupts) |
+|  Gray | I/O wait |
 
 **Memory (Mem) Bar:**
 
 | Color | Meaning |
 |-------|---------|
-| 🟢 Green | Used memory pages |
-| 🔵 Blue | Buffer pages |
-| 🟡 Yellow / Orange | Cache pages |
+|  Green | Used memory pages |
+|  Blue | Buffer pages |
+|  Yellow / Orange | Cache pages |
 
 **Swap (Swp) Bar:**
 
@@ -509,7 +475,7 @@ init (PID 1)
     └── php-fpm: pool www
 ```
 
-> 🌳 **Tree View Benefits:**
+>  **Tree View Benefits:**
 > - See which service spawned a process
 > - Identify runaway child processes
 > - Understand application architecture at a glance
@@ -574,7 +540,7 @@ You can edit this file directly or use the `F2` menu.
 | **Resource Usage** | Very lightweight | Slightly heavier (ncurses overhead) |
 | **Best For** | Quick checks, scripting, minimal systems | Interactive exploration, visual monitoring, learning |
 
-> 💡 **When to use which:**
+>  **When to use which:**
 > - Use **`ps`** for one-time snapshots and scripting
 > - Use **`top`** when you need a lightweight, always-available monitor or batch output
 > - Use **`htop`** when you want an interactive, visual, and user-friendly experience
@@ -838,7 +804,7 @@ ls -la /proc/1234/fd           # Open file descriptors
 
 ---
 
-## 📚 Additional Resources
+##  Additional Resources
 
 - [Linux `top` Manual Page](https://man7.org/linux/man-pages/man1/top.1.html)
 - [Linux `htop` Manual Page](https://man7.org/linux/man-pages/man1/htop.1.html)
@@ -848,7 +814,7 @@ ls -la /proc/1234/fd           # Open file descriptors
 
 ---
 
-## 📝 License
+##  License
 
 This guide is provided as educational material. Feel free to share, modify, and use it in your own projects.
 
@@ -856,4 +822,4 @@ This guide is provided as educational material. Feel free to share, modify, and 
 
 > **Contributions Welcome!** If you find errors or want to add more content, feel free to open a PR.
 >
-> *Happy monitoring!* 🐧✨
+> *Happy monitoring!* 
