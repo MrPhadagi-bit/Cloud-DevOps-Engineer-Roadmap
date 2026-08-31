@@ -34,9 +34,6 @@ Linux is a core foundation for cloud, DevOps, automation, containers, CI/CD, and
 - [Deploying a Simple Python Web Server](Linux%20Deploying_a_Simple_Python_Web_Server.md)
 - [Key Authentication, RSA, and FTP](Linux%20Text_Editors_Key_Authentication_RSA_FTP.md)
 
-## Resources
-
-Extra notes and supporting material are available in the [resources](resources/) folder.
 
 ## Learning Goal
 
